@@ -147,8 +147,23 @@ res.status(200).json({
 }
 }
 
+const demo=async (req,res)=>{
+  try{
+    // const posts=await post.find()
+    const posts=["hira","manish"]
+    res.status(200).json({
+      success: true,
+      posts,
+    })
+    }catch(error){
+      res.status(500).json({
+        success: false,
+        message: error.message,
+      });
+    }
+}
 
 
 
 
-module.exports = { register, login,home,profile,global};
+module.exports = { register, login,home,profile,global,demo};
