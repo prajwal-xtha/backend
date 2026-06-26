@@ -7,7 +7,7 @@ const {register,login,home,profile,global,demo}=require('../controller/controlle
 //register and login
 routes.post('/register',register)
 
-routes.post('/login',login)
+routes.get('/login',login)
 routes.get("/home",middleware1,home)
 routes.get('/profile',middleware1,profile)
 routes.get('/',global)
